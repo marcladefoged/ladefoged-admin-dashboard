@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+:root {
+    /* Variables For Storing Colors */
+    --primary-clr: #ff7550;
+    --bg-primary: #1f1d2a;
+    --bg-secondary: #252935;
+    --bg-ternary: #35333f;
+    --heading-clr: #efefef;
+    --text-clr: #808191;
+    --gradient: linear-gradient(to right, #35333f, transparent);
+}
+
+body {
+    position: relative;
+    width: 100%;
+    max-width: 1400px;
+    height: 100vh;
+    max-height: 100vh;
+    overflow: hidden;
+}
+
+.page-wrapper {
+    position: relative;
+    /* DEN HER DER BUGGER WIDTH */
+    width: 100%; 
+    height: 100vh;
+    background-color: var(--bg-secondary);
+}
+
+/* CODE FOR TOP BAR STARTS */
+.page-wrapper .top-bar {
+    position: relative;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+    background-color: var(--bg-primary);
+    border-bottom: 2px solid var(--bg-secondary);
+    z-index: 2px;
+}
+
+.page-wrapper .top-bar .top-bar-left {
+    display: flex;
+    align-items: center;
+}
+
+.top-bar .top-bar-left .hamburger-btn {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25px;
+    height: 18px;
+    cursor: pointer;
+    display: none;
+}
+
+.top-bar-left .hamburger-btn span {
+    width: 100%;
+    height: 2px;
+    background-color: var(--heading-clr);
+    border-radius: 15px;
+}
+
+.top-bar .top-bar-left .logo {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.top-bar .top-bar-left .logo img {
+    width: 120px;
+}
+
+.top-bar .search-box {
+    position: relative;
+    width: 400px;
+    height: 37px;
+    left: -80px;
+    background-color: var(--bg-ternary);
+    border-radius: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-bar .search-box .input-box {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    padding: 0px 50px 0px 20px;
+    border-radius: inherit;
+    background-color: var(--bg-ternary);
+    color: var(--heading-clr);
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    outline: none;
+    border: none;
+}
+
+.top-bar .search-box .search-btn {
+    position: absolute;
+    width: 37px;
+    height: 37px;
+    right: 0;
+    border-radius: 50px;
+    background-color: var(--bg-ternary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.top-bar .search-box .search-btn i {
+    color: var(--text-clr);
+    font-size: 15px;
+}
