@@ -126,3 +126,46 @@ body {
     color: var(--text-clr);
     font-size: 15px;
 }
+
+.top-bar .top-bar-right {
+   display: flex;
+   align-items: center;
+   gap: 20px;
+
+}
+
+.top-bar .top-bar-right .mode-switch,
+.top-bar .top-bar-right .notifications {
+    position: relative;
+}
+
+.top-bar .top-bar-right .mode-switch i,
+.top-bar .top-bar-right .notifications i {
+    font-size: 20px;
+    color: var(--text-clr);
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.top-bar .top-bar-right .mode-switch i:hover,
+.top-bar .top-bar-right .notifications i:hover {
+    color: var(--heading-clr);
+}
+
+.top-bar .top-bar-right .profile {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    padding-left: 10px;
+    border-left: 2px solid var(--bg-ternary);
+}
+
+.top-bar .top-bar-right .profile img {
+    width: 37px;
+    height: 37px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+/* TOP BAR CODE ENDS */
