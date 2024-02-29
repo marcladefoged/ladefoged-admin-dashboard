@@ -169,3 +169,158 @@ body {
 }
 
 /* TOP BAR CODE ENDS */
+
+/* Code For Side Bar Starts */
+
+.page-wrapper .side-bar {
+    position: fixed;
+    width: 240px;
+    height: calc(100vh - 70px);
+    top: 70px;
+    left: 0;
+    background-color: var(--bg-primary);
+    overflow-x: hidden;
+    overflow-y: auto;
+    z-index: 100;
+    transition: width 0.3s;
+}
+.page-wrapper .side-bar::-webkit-scrollbar {
+    width: 5px;
+}
+
+.page-wrapper .side-bar::-webkit-scrollbar-track {
+    border: 1px solid var(--bg-ternary);
+    background-color: var(--bg-primary);
+}
+
+.page-wrapper .side-bar::-webkit-scrollbar-thumb {
+    background-color: var(--bg-ternary);
+    border-radius: 5px;
+}
+
+.side-bar .menu-label {
+    display: inline-block;
+    margin: 25px 0px 15px;
+    margin-left: 20px;
+    color: var(--heading-clr);
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.side-bar ul.navbar-links {
+    width: 100%;
+    list-style: none;
+}
+
+.side-bar ul.navbar-links li {
+    position: relative;
+    width: 100%;
+    /* padding: 12px 0px; */
+}
+
+.side-bar ul.navbar-links li:hover,
+.side-bar ul.navbar-links li.active {
+    background: var(--gradient);
+}
+
+.side-bar ul.navbar-links li::before {
+    position: absolute;
+    content: '';
+    width: 3px;
+    height: 100%;
+    top: 0;
+    left: 0;
+    /* background-color: yellow; */
+    background-color: transparent;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.side-bar ul.navbar-links li:hover::before,
+.side-bar ul.navbar-links li.active::before {
+    background-color: var(--primary-clr);
+}
+
+.side-bar ul.navbar-links li a {
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: var(--text-clr);
+    display: flex;
+    align-items: center;
+}
+
+ul.navbar-links li a .nav-icon {
+    position: relative;
+    display: block;
+    min-width: 70px;
+    width: 70px;
+    height: 100%;
+    padding: 14px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul.navbar-links li a .nav-icon i {
+    font-size: 17px;
+}
+
+ul.navbar-links li a .nav-text {
+    color: var(--text-clr);
+    white-space: nowrap;
+}
+
+ul.navbar-links li.active a .nav-icon i,
+ul.navbar-links li.active a .nav-text {
+    color: var(--heading-clr);
+}
+
+.side-bar .line {
+    position: relative;
+    display: inline-block;
+    width: calc(100% - 50px);
+    height: 1px;
+    background-color: var(--bg-ternary);
+    left: 25px;
+    margin: 20px auto 10px;
+}
+
+.side-bar .sidebar-footer {
+    position: relative;
+    width: 100%;
+    margin-top: 80px;
+    white-space: nowrap;
+}
+
+.side-bar .sidebar-footer .settings,
+.side-bar .sidebar-footer .logoutBtn {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    color: var(--text-clr);
+    border-top: 1px solid var(--bg-secondary);
+}
+
+.sidebar-footer .settings .gear-icon,
+.sidebar-footer .logoutBtn .logout-icon {
+    display: block;
+    position: relative;
+    min-width: 70px;
+    width: 70px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.sidebar-footer .settings .gear-icon:hover,
+.sidebar-footer .logoutBtn .logout-icon:hover {
+    color: var(--heading-clr);
+}
+
+
+/* Code For Side Bar Ends */
+
