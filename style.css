@@ -323,14 +323,206 @@ ul.navbar-links li.active a .nav-text {
 
 /* Code For Side Bar Ends */
 
+/* Code For Content Starts */
+.page-wrapper .contents {
+    position: relative;
+    width: 100%;
+    min-height: calc(100vh - 70px);
+    height: calc(100vh - 70px);
+    overflow-y: auto;
+    padding-left: 240px;
+    transition: 0.3s;
+    z-index: 1;
+}
+    /* Code For Panel Bar */
+.contents .panel-bar {
+    position: relative;
+    width: 100%;
+    height: 135px;
+    background-color: var(--bg-primary);
+    padding: 20px;
+}
+
+.contents .panel-bar .row-1 {
+    width: 100%;
+}
+
+.contents .panel-bar .row-1 h1 {
+    color: var(--heading-clr);
+    font-size: 32px;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.contents .panel-bar .row-2 {
+    position: absolute;
+    bottom: 0;
+}
+
+.contents .panel-bar .row-2 a {
+    display: inline-block;
+    height: 100%;
+    margin-right: 25px;
+    padding: 10px 0px 22px;
+    font-size: 15px;
+    text-decoration: none;
+    color: var(--text-clr);
+}
+
+.contents .panel-bar .row-2 a:nth-of-type(4) {
+    margin-right: 0px;
+}
+
+.contents .panel-bar .row-2 a.active {
+    border-bottom: 1px solid var(--primary-clr);
+    color: var(--primary-clr);
+}
+/* Code For Panel Ends */
+
+/* Code For Description Starts */
+.contents .description {
+    width: 100%;
+    padding: 30px 20px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 20px;
+    background-color: yellow;
+}
+/* Code For Column 1 Starts */
+.contents .description .col-1 {
+    position: relative;
+    width: 100%;
+}
+/* Balance Boxes Starts */
+.description .col-1 .boxes-row {
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 15px;
+}
+
+.col-1 .boxes-row .balance-box {
+    background-color: var(--bg-primary);
+    padding: 30px 25px;
+    color: var(--text-clr);
+    border-radius: 5px;
+}
+
+.boxes-row .balance-box .subject-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.boxes-row .balance-box .subject-row .text {
+    position: relative;
+}
+
+.balance-box .subject-row .text h3 {
+    color: var(--text-clr);
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.balance-box .subject-row .text h1 {
+    color: var(--heading-clr);
+    font-size: calc(22px + 0.35vw);
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin: 20px 0px;
+}
+
+.balance-box .subject-row .text h1 sub {
+    position: relative;
+    font-size: 13px;
+    color: var(--text-clr);
+    left: 3px;
+    top: -5px;
+}
+
+.balance-box .icon {
+    width: 45px;
+    height: 45px;
+    background-color: var(--bg-ternary);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.balance-box .icon i {
+    color: #5fcf65;
+    font-size: 18px;
+}
+
+.balance-box:nth-of-type(2) .icon i {
+    color: var(--primary-clr);   
+}
+
+.balance-box .progress-row {
+    position: relative;
+    width: 100%;
+}
+
+.balance-box .progress-row .subject {
+    font-size: 15px;
+    color: var(--text-clr);
+    margin-top: 3px;
+    text-transform: lowercase;
+}
+
+.balance-box .progress-row .progress-bar {
+    width: 100%;
+    height: 5px;
+    background-color: var(--bg-ternary);
+    border-radius: 15px;
+    margin-top: 10px;
+}
+
+.balance-box .progress-row .progress-bar .progress-line {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #5fcf65;
+    border-radius: 15px;
+}
+
+.balance-box:nth-of-type(2) .progress-row .progress-bar .progress-line {
+    background-color: var(--primary-clr);
+}
+
+.balance-box .progress-row .progress-bar .progress-line::after {
+    position: absolute;
+    content: attr(value);
+    top: -25px;
+    right: 0;
+    transform: translateX(50%);
+    color: var(--text-clr);
+    font-size: 15px;
+}
+/* Balance Boxes Ends */
+
+
+
+/* Code For Column 1 Ends */
+/* Code For Description Ends */
+
+/* Code For Content Ends */
+
 /* Media Query Starts */
 @media(max-width: 1068px) {
     /* Side Bar */
     .page-wrapper .side-bar {
         width: 70px;
     }
+    .page-wrapper .side-bar.active {
+        width: 240px;
+    }
     .side-bar .menu-label {
         display: none;
+    }
+    .side-bar.active .menu-label {
+        display: block;
     }
     .side-bar ul.navbar-links.navbar-links-1 {
         margin-top: 15px;
