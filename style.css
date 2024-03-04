@@ -15,7 +15,15 @@
     --text-clr: #808191;
     --gradient: linear-gradient(to right, #35333f, transparent);
 }
-
+body.active {
+    --primary-clr: #ff7550;
+    --bg-primary: #fff;
+    --bg-secondary: #f3f7fa;
+    --bg-ternary: #e7eaf0;
+    --heading-clr: #16192c;
+    --text-clr: #596780;
+    --gradient: linear-gradient(to right, #e1e5e8, transparent);
+}
 body {
     position: relative;
     width: 100%;
@@ -1018,5 +1026,4 @@ ul.navbar-links li.active a .nav-text {
         margin-right: 12px;
         font-size: 14px;
     }
-
 }
